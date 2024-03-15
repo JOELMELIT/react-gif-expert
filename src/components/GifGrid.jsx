@@ -11,6 +11,7 @@ import { GifItem } from './GifItem';
 import { useFetchGifs } from '../hooks/useFetchGifs';
 //import { getGifs } from '../helpers/getGifs';
 
+import PropTypes from 'prop-types';
 
 export const GifGrid = ({ categoryy }) => {   // Esto es un functional component
     /*
@@ -93,7 +94,11 @@ useEffect(<function>, <dependency>)
 */
 
 
+// Establecer los propTypes para el TESTEO EN JEST
 
+GifGrid.propTypes = {
+    categoryy: PropTypes.string.isRequired,
+}
 
 
 

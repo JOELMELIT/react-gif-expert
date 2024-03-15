@@ -7,7 +7,7 @@ import { AddCategory, GifGrid } from './components'; // Archivo de Barril - Toma
 
 export const GifExpertApp = () => {
 
-    const [categories, setCategories] = useState([ 'One Punch']);
+    const [categories, setCategories] = useState([]);
 
     const onAddCategory = ( newCategory ) => {
 

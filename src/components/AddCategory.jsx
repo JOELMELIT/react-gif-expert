@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import PropTypes from 'prop-types'
+
 //export const AddCategory = ({ setCategoriess }) => { // Primera manera de hacerlo
 export const AddCategory = ({ onNewCategory }) => {
 
@@ -8,9 +10,10 @@ export const AddCategory = ({ onNewCategory }) => {
     */
     const [inputValue, setinputValue] = useState('')
 
-    const onInputChange = ( event ) => {
+    // const onInputChange = ( event ) => {
+    const onInputChange = ( { target } ) => {
         //console.log(event.target.value);
-        setinputValue(event.target.value);
+        setinputValue(target.value);
     }
 
     const onSubmit = ( event ) => {
@@ -32,7 +35,7 @@ export const AddCategory = ({ onNewCategory }) => {
     return (
 
         /* <form onSubmit={ event => onSubmit(event)}>  tambien se puede resumi en <form onSubmit={ onSubmit }>   */
-        <form onSubmit={ event => onSubmit(event)}> 
+        <form onSubmit={ event => onSubmit(event)} aria-label="form"> 
             <input
                 type="text"
                 placeholder="Buscar Gifs"
@@ -67,6 +70,12 @@ Otherwise, set either `onChange` or `readOnly`.
 
 */
 
+
+// PREEBAS
+
+AddCategory.propTypes = {
+    onNewCategory: PropTypes.func.isRequired,
+}
 
 
 
