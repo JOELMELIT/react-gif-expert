@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 //export const AddCategory = ({ setCategoriess }) => { // Primera manera de hacerlo
 export const AddCategory = ({ onNewCategory }) => {
@@ -11,7 +11,7 @@ export const AddCategory = ({ onNewCategory }) => {
     const [inputValue, setinputValue] = useState('')
 
     // const onInputChange = ( event ) => {
-    const onInputChange = ( { target } ) => {
+    const onInputChange = ( { target } ) => { // aqui desestructuramos del event el target
         //console.log(event.target.value);
         setinputValue(target.value);
     }

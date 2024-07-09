@@ -19,11 +19,19 @@ export const GifGrid = ({ categoryy }) => {   // Esto es un functional component
     // Mantener un estado local dentro del GifGrid para mantener las imagenes, es preservado cuando se redibuja el componente
     const [images, setImages] = useState([]);
 
+    //Esto dara un error ya que el useEffect espera el retorno de una función, al usar el async lo que se esta retornando es la respuesta de una Promesa
+    //useEffect(() => {
+    //    const newImages = await getGifs( categoryy );
+    //    setImages(newImages);
+    //}
+    //}, [ ])
+
+
+
     const getImages = async () =>{
         const newImages = await getGifs( categoryy );
         setImages(newImages);
     }
-
 
     // Se puede disparar un  efecto secundario en cualquier punto del functional component
     // El useEffect no puede usar el async - useEffect tiene que regresar una funcion, y el async regresa una promesa 

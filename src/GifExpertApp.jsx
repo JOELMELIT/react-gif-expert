@@ -15,17 +15,17 @@ export const GifExpertApp = () => {
             return;
         }
 
-        console.log(newCategory);
+        //console.log(newCategory);
+        //setCategories([newCategory.toLowerCase(), ...categories]);
         setCategories([newCategory, ...categories]);
-
     }
-
+S
     return (
         <>
             <h1>GifExpertApp</h1>
 
             <AddCategory 
-                onNewCategory = { (value) => onAddCategory(value)}
+                onNewCategory = { (value) => onAddCategory(value)} // Aqui le mandamos la funcion onAddCategory como una property
             />
             { 
                 categories.map( category =>
@@ -131,7 +131,7 @@ export const GifExpertApp = () => {
 /* 
 
 ol - order list
-:: marker - Lo crea React para saber que ese es el elmento
+:: marker - Lo crea React para saber que ese es el elemento
 
 
 
