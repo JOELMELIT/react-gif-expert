@@ -7,7 +7,7 @@ export const getGifs = async ( category ) =>{
 
     const resp = await fetch ( url );
     
-    const { data = [] } = await resp.json(); // data = [], para asegurarnos que siempre exista data, aunque este vacia
+    const { data = [] } = await resp.json(); // data = [], para asegurarnos que siempre exista un arreglo, aunque este vacia
 
     const gifs = data.map ( img => ({  // la sintaxis ({ significa que ya esta retornando un objeto
         id: img.id,

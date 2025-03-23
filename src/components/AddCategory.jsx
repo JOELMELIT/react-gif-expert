@@ -71,7 +71,7 @@ Otherwise, set either `onChange` or `readOnly`.
 */
 
 
-// PREEBAS
+// PRUEBAS
 
 AddCategory.propTypes = {
     onNewCategory: PropTypes.func.isRequired,
